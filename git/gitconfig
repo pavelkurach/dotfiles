@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = <...>
+	email = <...>
+[merge]
+	tool = nvimdiff
+[core]
+	editor = nvim
+[pull]
+	rebase = true

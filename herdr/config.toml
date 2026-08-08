@@ -1,0 +1,40 @@
+# herdr configuration — mirrors ~/.tmux.conf
+
+[theme]
+name = "catppuccin"
+
+[keys]
+prefix = "ctrl+a"
+
+# tmux: bind | split-window -h  (panes side by side)
+split_vertical = "prefix+|"
+# tmux: bind - split-window -v  (panes stacked) — herdr default
+split_horizontal = "prefix+minus"
+
+# tmux: bind s choose-tree (session picker)
+workspace_picker = ["prefix+s", "prefix+w"]
+# displaced by workspace_picker above
+settings = "prefix+shift+s"
+
+# tmux: bind r source-file ~/.tmux.conf
+reload_config = "prefix+r"
+# displaced by reload_config above
+resize_mode = "prefix+shift+r"
+
+# tmux: bind -r m resize-pane -Z
+zoom = ["prefix+m", "prefix+z"]
+
+# tmux: vim-tmux-navigator binds bare ctrl+hjkl
+focus_pane_left = ["ctrl+h", "prefix+h"]
+focus_pane_down = ["ctrl+j", "prefix+j"]
+focus_pane_up = ["ctrl+k", "prefix+k"]
+focus_pane_right = ["ctrl+l", "prefix+l"]
+
+[ui]
+# tmux: set -g status-position bottom
+tab_bar_position = "bottom"
+mouse_capture = true
+copy_on_select = true
+
+[ui.sound]
+enabled = false
