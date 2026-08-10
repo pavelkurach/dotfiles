@@ -3,6 +3,7 @@
 [theme]
 name = "catppuccin"
 
+auto_switch = false
 [keys]
 prefix = "ctrl+a"
 
@@ -31,10 +32,26 @@ focus_pane_up = ["ctrl+k", "prefix+k"]
 focus_pane_right = ["ctrl+l", "prefix+l"]
 
 [ui]
-# tmux: set -g status-position bottom
-tab_bar_position = "bottom"
+tab_bar_position = "top"
+sidebar_width = 36
+sidebar_max_width = 48
 mouse_capture = true
 copy_on_select = true
 
+show_agent_labels_on_pane_borders = false
+
+[ui.sidebar.agents]
+rows = [
+  [
+    "state_icon",
+    { token = "tab", fg = "#cdd6f4", bold = true, dim = false },
+    { token = "workspace", bold = false, dim = true },
+  ],
+  ["agent"],
+]
+
 [ui.sound]
 enabled = false
+
+[ui.toast]
+delivery = "herdr"
